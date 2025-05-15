@@ -1,0 +1,75 @@
+.fleet {
+  margin: 80px 0px;
+}
+
+.fleet h1 {
+  font-size: 2.5em;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+.fleet h3 {
+  text-align: center;
+  color: #555;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 80px;
+}
+
+.fleet p {
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+input, textarea {
+  border: 1px solid #e5e5e5;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.fleet button {
+  width: 100%;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 0px;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.fleet-box {
+  width: calc(50% - 24px);
+}
+
+/* contact */
+
+.contact-info ul li {
+  margin: 48px 0px;
+}
+
+.contact-info ul li span {
+  margin-left: 12px;
+}
+
+.area-white {
+  background-color: #fff !important;
+  margin-top: 0px !important;
+}
+
+.fleet-content {
+  flex-direction: column;
+}
+
+.fleet-box {
+  width: 100%;
+  padding: 12px;
+}

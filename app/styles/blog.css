@@ -1,0 +1,430 @@
+.blog-two .blog-box section:nth-child(1) {
+  width: 52%;
+}
+
+.blog-two .blog-box section:nth-child(2) {
+  width: 40%;
+}
+
+.blog-box section:nth-child(1) {
+  width: 61%;
+}
+
+.blog-box section:nth-child(2) {
+  width: 70%;
+}
+
+.c-p {
+  align-items: flex-start;
+}
+
+.c-p > section {
+  width: 50%;
+  padding: 46px;
+}
+
+.c-p > section:first-child {
+  padding-left: 0px;
+}
+
+.c-p > section:last-child {
+  padding-right: 0px;
+}
+
+.faq-sec-1 {
+  width: 40%;
+}
+
+.blog-img {
+  padding: 60px;
+  padding-top: 0px;
+}
+
+.colbox-data {
+  background-color: rgba(211, 106, 31, 1);
+  padding: 48px 0px;
+}
+
+.bg-lp-without {
+  padding: 80px 0px;
+  background-color: #fff !important;
+}
+
+.bg-lp-without h1 {
+  color: #222 !important;
+}
+
+.bg-lp-without h2 {
+  color: #333 !important;
+}
+
+.bg-lp-without p {
+  color: #333 !important;
+}
+
+.h2-vorteile {
+  color: #fff;
+}
+
+.first-blog {
+  justify-content: flex-start;
+}
+
+.first-blog .blog-box:nth-child(2) {
+  margin-right: 0px !important;
+}
+
+.blog-card a {
+  margin-top: 24px;
+  background: var(--main-color);
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 6px;
+  color: #fff;
+  padding-top: 6px;
+}
+
+.blog-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-two .blog {
+  width: calc(50% - 16px);
+  margin: 16px;
+}
+
+.blog-two .blog p {
+  display: -webkit-box;
+  max-width: 259px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.blog-two .blog {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.blog-two h4 {
+  font-size: 1.25em;
+}
+
+.blog-two a {
+  font-size: 1em;
+}
+
+.blog-two .blog-box section:nth-child(1) {
+  width: 52%;
+}
+
+.blog-two .blog-box section:nth-child(2) {
+  width: 40%;
+}
+
+.blog-main h2 {
+  margin-top: 24px;
+}
+
+.blog-main h3 {
+  font-size: 1.25em;
+}
+
+.pagni {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.pagni i {
+  display: block;
+  color: #555;
+  cursor: pointer;
+}
+
+.pagni-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagni button {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 5px 8px;
+  color: #333;
+  text-align: center;
+  margin: 7px;
+}
+
+.pagni button:hover {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  color: #fff;
+  background-color: rgba(211, 106, 31, 1);
+}
+
+.link-lp {
+  color: #fff;
+  margin-top: 24px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bg-lp-c p {
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
+}
+
+.lp-bb {
+  color: #000 !important;
+}
+
+.inner-data {
+  align-items: flex-start !important;
+}
+
+.text-tarif-ul {
+  padding-left: 0px !important;
+}
+
+
+.blog-main h2 {
+  text-align: center;
+  font-size: 2.5em !important;
+}
+
+.blog-main h3 {
+  text-align: center;
+  font-size: 1.75em;
+  margin-bottom: 32px;
+}
+
+.img-blog {
+  max-height: 350px;
+  border-radius: 8px;
+}
+
+.blog-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blog-box section {
+  margin: 16px;
+}
+
+.blog small {
+  font-weight: 500 !important;
+}
+
+.blog-first {
+  max-width: 1000px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog h4 {
+  font-size: 1.75em;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.first-blog {
+  justify-content: flex-start;
+}
+
+.first-blog .blog-box:nth-child(2) {
+  margin-right: 0px !important;
+}
+
+.blog-card a {
+  margin-top: 24px;
+  background: var(--main-color);
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 6px;
+  color: #fff;
+  padding-top: 6px;
+}
+
+.blog-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-two .blog {
+  width: calc(50% - 16px);
+  margin: 16px;
+}
+
+.blog-two .blog p {
+  display: -webkit-box;
+  max-width: 259px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.blog-two .blog {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.blog-two h4 {
+  font-size: 1.25em;
+}
+
+.blog-two a {
+  font-size: 1em;
+}
+
+.blog-main h2 {
+  margin-top: 24px;
+}
+
+.blog-main h3 {
+  font-size: 1.25em;
+}
+
+.pagni {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.pagni i {
+  display: block;
+  color: #555;
+  cursor: pointer;
+}
+
+.pagni-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagni button {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 5px 8px;
+  color: #333;
+  text-align: center;
+  margin: 7px;
+}
+
+.pagni button:hover {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  color: #fff;
+  background-color: rgba(211, 106, 31, 1);
+}
+
+.link-lp {
+  color: #fff;
+  margin-top: 24px;
+}
+
+.blog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.blog-container h1 {
+  font-size: 3em;
+}
+
+.blog-container p {
+  line-height: 1.6;
+  margin-top: 12px;
+  color: #555;
+}
+
+.blog-container > section {
+  padding: 16px;
+}
+
+.blog-container .bold {
+  font-weight: 500;
+  color: black;
+}
+
+.blog-quest {
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 180px;
+}
+
+.blog-quest > section {
+  width: 50%;
+  padding: 24px;
+}
+
+.q2 {
+  padding-right: 120px;
+  color: #555;
+}
+
+.q1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.q1 p {
+  font-size: 2.5em;
+  text-align: right;
+  max-width: 600px;
+}
+
+.q2 p {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.7;
+  margin: 20px 0px;
+  margin-top: 0px !important;
+}
+
+.q2 ul {
+  margin-left: 16px;
+}
+
+.q2 ul li {
+  display: block;
+  font-weight: 500;
+}
+
+a {
+  color: blue;
+}

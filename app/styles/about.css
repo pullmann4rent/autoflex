@@ -1,0 +1,51 @@
+.about_us {
+  margin: 120px 0px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+h3 {
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.about_us img {
+  border-radius: 8px;
+}
+
+.about-box {
+  width: calc(50% - 24px);
+}
+
+.about-box p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-box ul {
+  margin: 16px;
+}
+
+.about-box ul li {
+  display: flex;
+  margin: 16px;
+}
+
+.about-lion {
+  margin: 120px 0px;
+}
+
+.about-lion p {
+  color: var(--main-color);
+  font-weight: 500;
+  margin-top: 16px;
+  font-size: 1.5em;
+}
