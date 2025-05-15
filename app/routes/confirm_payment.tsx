@@ -1,6 +1,6 @@
 import { json } from "@remix-run/node";
 import pool from "~/data/db.server";
-import { stripe } from "~/data/stripe_new.server";
+import { stripe } from "~/data/stripe_new";
 
 export const action = async ({ request, params }) => {
   try { 

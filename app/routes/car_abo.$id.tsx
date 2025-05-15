@@ -18,6 +18,7 @@ import ModalSliderAbo from "~/components/ModalSlider/ModalSliderAbo";
 import PaymentStripe from "./payment";
 import { Question } from "~/components/Faqs";
 import '../styles/faq_new.css';
+import "react-day-picker/style.css";
 
 const faqs = [
   {
@@ -703,7 +704,7 @@ export default function CarID() {
             </section>
      
               </section>
-              { selectedKM && selectedContract && fullContract && fullKM &&
+              { openPayment && selectedKM && selectedContract && fullContract && fullKM &&
                 <PaymentStripe 
                     shipping_date={shippingDate} 
                     price={price ?? 0} 

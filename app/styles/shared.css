@@ -4453,7 +4453,7 @@ input[type=number] {
   margin: 12px;
   margin-top: 24px;
   background: #fff;
-  color: #333;
+  color: #333 !important;
   border: 2px solid black;
   font-family: inherit;
   font-weight: 500;
