@@ -3,88 +3,88 @@ import Lion from '../../assets/lion.png';
 import { ICarNewImg } from '../Modal/ModalAddCar/types';
 import { Link } from '@remix-run/react';
 import numeral from 'numeral';
+import { FaRegCheckCircle } from 'react-icons/fa';
 
 export function CarBoxSmall({
   id,
+  name,
+  image,
+  fuel,
+  engine,
+  type,
+  images,
+  availability,
+  annotation,
+  model_year,
+  tires,
+  sit_places,
+  consumption,
+  details,
   brand,
   model,
-  cover,
-  video,
-  price,
-  tuv,
-  fsk,
-  type,
-  sit_place,
-  engine,
-  fuel,
-  car_designation,
-  firstregistration,
   ps,
   km,
-  color,
-  equipment,
-  description,
-  environment,
-  show,
-  images,
+  durationcontract,
   onClick
 }: ICarNewImg & {onClick: (id: string) => void}) {
   return (
-    <a href={`/car/${id}`} className="cbss cb-first">
-      <section className="car-box car-box-small car-box-renew relative pointer relative">
+    <a href={`/car_abo/${id}`} className="cbss cb-first">
+      
+      <div className="c-hd-img-con">
+        <img src={image} alt="cover" />
+      </div>
 
-        <img src={cover} alt="Car" />   
+      <div className="c-car-main">
+        <div className="c-hd">
+          <h2>{brand} {annotation}</h2>
 
-        <img src={Lion} className="car-lion" />
-      </section>
+          <div className="c-hd-span">
+            <span>{type}</span>
+          </div>
+        </div>
 
-      <section className="car-box-footer">
-        <section className="flex jc-sb ai-c cbf-1">
-          <section>
-            <p className="small">{brand}</p>
-            <p className="full_name_car">{model} {car_designation}</p>
-          </section>
-          <section>
-            <p className="car-box-small-price">{new Intl.NumberFormat("de-DE").format(price)} €</p>
-            <p className="small">Mwst. ausweisbar</p>
-          </section>
-        </section>
+        <p className="c-price">{parseFloat(durationcontract[0].price).toFixed(2)}€/Monat</p>
+      
+        <ul className="details">
+          <li>
+            <div>
+              Sitzplätze
+            </div>
 
-        <ul className="flex f-wrap jc-sb cbf-2">
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">{engine}</span>
+            <span>{sit_places}</span>
           </li>
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">{fuel}</span>
-          </li>
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">{firstregistration}</span>
-          </li>
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">{ps} PS</span>
-          </li>
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">{new Intl.NumberFormat("de-DE").format(km)} km</span>
-          </li>
-          <li className="flex ai-c">
-            <img src={Lion} alt="Logo" className="lion-li" />
-            <span className="ml-6">TÜV {tuv}</span>
-          </li>
-        </ul>
+          <li>
+            <div>
+              PS
+            </div>
 
-        <p className="garantie">Garantie</p>
+            <span>{ps}</span>
+          </li>
+          <li>
+            <div>
+              Motor
+            </div>
 
-        <section className="flex jc-c">
-          <button type="button" onClick={() => onClick(id)} className="car-box-small-btn-offer">
-            Angebot anschauen
-          </button>
-        </section>
-      </section>
+            <span>{engine}</span>
+          </li>
+        </ul>      
+
+{/*         <div className="c-more-d">
+          <div>
+            <FaRegCheckCircle color="green" style={{marginRight: 6}} size={14} />
+            <span>{fuel}</span>
+          </div>
+
+          <div>
+            <FaRegCheckCircle color="green" style={{marginRight: 6}} size={14} />
+            <span>{tires}</span>
+          </div>
+        </div> */}
+
+        <button type="button" className="c-btn-car">Zum Auto</button>
+
+      </div>
+
     </a>
   )
 }

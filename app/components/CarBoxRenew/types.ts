@@ -14,6 +14,9 @@ export interface ICar {
   ps: number;
   sit_places: number;
   consumption: string;
+  engine: string;
+  fuel: string;
+  type: string;
   details?: {
     type?: string;
     engine: string;

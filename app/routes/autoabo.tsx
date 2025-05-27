@@ -712,8 +712,8 @@ export default function Autoabo() {
 
   const [open, setOpen] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
-  const [selectedModel, setSelectedModel] = useState<string[]>([]);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>(searchParams.get('brands')?.split(',') ?? []);
+  const [selectedModel, setSelectedModel] = useState<string[]>(searchParams.get('models')?.split(',') ?? []);
   const [selectedFuel, setSelectedFuel] = useState<string[]>([]);
   const [selectedType, setSelectedType] = useState<string[]>([]);
   const [selectedDuration, setSelectedDuration] = useState<string[]>([]);
@@ -753,17 +753,15 @@ export default function Autoabo() {
 
   useEffect(() => {
     if(selectedBrands.length > 0) {
+      console.log('1');
       params.set('brands', `${selectedBrands.join(',')}`);
-    } else if(searchParams.get('brands')) {
-      params.set('brands', searchParams.get('brands'));
     } else if(selectedBrands.length === 0) {
+      console.log('3');
       params.delete('brands');
     }
 
     if(selectedModel.length > 0) {
       params.set('models', `${selectedModel.join(',')}`);
-    } else if(searchParams.get('models')) {
-      params.set('models', searchParams.get('models'));
     } else if(selectedModel.length === 0) {
       params.delete('models');
     }
@@ -832,6 +830,7 @@ export default function Autoabo() {
     sortBy
   ]);
 
+
   const handleSelectBrands = (val: string) => {
     if(!selectedBrands.includes(val)) {
       setSelectedBrands(el => ([...el, val]));
@@ -846,9 +845,46 @@ export default function Autoabo() {
   };
 
   useEffect(() => {
-   // console.log(models);
-  }, [models]);
+    console.log('SSSSSSSS')
+   const md = searchParams.get('models')?.split(',');
 
+   md?.map((el) => {
+    console.log(el);
+    const allModels = model.map((e) => {
+      if(e.model.includes(el)) {
+        setModels(prev => [...prev, {
+          car_id: e.car_id,
+          model: e.model,
+          name: e.name
+        }])
+      }
+    })
+   });
+  }, []);
+
+
+  console.log('MODELS');
+  console.log(models);
+  useEffect(() => {
+    console.log('SSSSSSSS')
+   const brands = searchParams.get('brands')?.split(',');
+
+   brands?.map((el) => {
+    model.map((e) => {
+      if(e.name === el) {
+        setModels(prev => [...prev, {
+          car_id: e.car_id,
+          model: e.model,
+          name: e.name
+        }])
+      }
+    })
+   })
+
+    setModels(prev => prev.reverse().filter((v, i, a) => a.map(e => e.car_id).indexOf(v.car_id) === i))
+  }, []);
+
+  console.log(models);
   const handleSelectModel = (val: string) => {
     if(!selectedModel.includes(val)) {
       setSelectedModel(el => ([...el, val]));
@@ -928,7 +964,7 @@ export default function Autoabo() {
               <section className={`search-data search-brand ${open.includes('brand') && 'open-search'}`}>
                 {
                   brands.map((el => {
-                    return (
+                    return (console.log(el),
                       <section onClick={() => handleSelectBrands(el)} key={el} className="search-inner flex">
                         { selectedBrands.includes(el) ?
                           <div className="checkbox-search search-black">
@@ -946,7 +982,7 @@ export default function Autoabo() {
             </section>
 
             <section className="search-item">
-            <section onClick={() => handleOpen('model')} className="search-header flex flex-between as">
+              <section onClick={() => handleOpen('model')} className="search-header flex flex-between as">
                 <p className={`modell ${models.length === 0 && 'grey-marked'}`}>Modell</p>
                 <MdOutlineKeyboardArrowDown 
                   className={`${open.includes('model') && models.length > 0 && 'animate-arrow'}`} 
@@ -960,22 +996,25 @@ export default function Autoabo() {
                     return (
                       <section key={el.car_id} className="search-inner">
                         <h3>{el.name}</h3>
-                        {
-                          el.model.map((e => {
-                            return (
-                              <section key={e} onClick={() => models.length > 0 ? handleSelectModel(e) : {}} className="search-inner flex">
-                                { selectedModel.includes(e) ?
-                                  <div className="checkbox-search search-black">
-                                    <BsCheck2 color="#fff" size={18} />
-                                  </div>
-                                  :
-                                  <div className="checkbox-search" />
-                                }
-                                <li>{e}</li>
-                              </section>
-                            )
-                          }))
-                        }
+
+                        <div className="search-inner-content">
+                          {
+                            el.model.map((e => {
+                              return (
+                                <section key={e} onClick={() => models.length > 0 ? handleSelectModel(e) : {}} className="search-inner flex">
+                                  { selectedModel.includes(e) ?
+                                    <div className="checkbox-search search-black">
+                                      <BsCheck2 color="#fff" size={18} />
+                                    </div>
+                                    :
+                                    <div className="checkbox-search" />
+                                  }
+                                  <li>{e}</li>
+                                </section>
+                              )
+                            }))
+                          }
+                        </div>
                       </section>
                     )
                   }))
@@ -1231,8 +1270,8 @@ export default function Autoabo() {
                         <li>{el.details[0].fuel}</li>
                       </ul>
                       <section className="ca-price-con flex">
-                        <p>ab {el.durationcontract[0].price}€</p>
-                        <span>pro Monat</span>
+                        <p className="bold-p">ab {parseFloat(el.durationcontract[0].price).toFixed(2)}€</p>
+                        <p className="pro-month">pro Monat</p>
                       </section>
                     </Link>
                   </>

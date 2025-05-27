@@ -22,7 +22,9 @@ import { CarBoxSmall } from "~/components/CarBoxSmall/CarBoxSmall";
 import { MeetingCalendar } from "~/components/MeetingCalendar/MeetingCalendar";
 import { IoCalendarOutline } from "react-icons/io5";
 import ModalCalendar from "~/components/ModalCalendar/ModalCalendar";
-import Img from '../assets/bg.jpeg';
+import Autoabo from '../assets/autoabo.jpg';
+import { FaCarCrash, FaEuroSign, FaMap, FaRegCalendar, FaSync } from "react-icons/fa";
+import { IoIosStar, IoIosStarOutline, IoMdHome } from "react-icons/io";
 
 export const meta: MetaFunction = () => {
   return [
@@ -45,8 +47,8 @@ export default function Index() {
   var settingsNewCars = {
     dots: false,
     infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
+    speed: 100,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
     cssEase: "linear",
@@ -183,20 +185,9 @@ export default function Index() {
       <Header />
 
       <section className="relative main-main">
-        <img src={Img} alt="IMG" className="main-img" />
-        <section className="text-left">
-          <p>Rent.</p>
-          <p>Drive.</p>
-          <p>Repeat.</p>
-        </section>
 
-        <section className="text-right">
-          <p>Our mission</p>
-          <p>is your</p>
-          <p>need.</p>
-        </section>
         <section className="container flex fd-col ai-c slider-content">
-          <h1>Entdecken Sie jetzt die besten Mietkauf-Angebote</h1>
+          <h1>Entdecken Sie jetzt unser Autoabo!</h1>
           <h2 className="bg-subtitle">Suche jetzt dein Traumfahrzeug</h2>
           <SelectCar
             count={data.carsCount}
@@ -234,13 +225,13 @@ export default function Index() {
         <section>
         <h3 className="last-car-title">Unsere Neuzugänge</h3>
 
-        <section className="index-cb-r relative">
+        <section className="index-cb-r relative car-slick">
         <button className="prev prev-2" onClick={() => refSlider2?.current?.slickPrev()}><TfiAngleLeft size={24} color="grey" /></button>
           <Slider ref={refSlider2} {...settingsNewCars}>
             { 
               data.allCars.map((el) => (
-                <div className="relative" key={el.id}>
-                  <CarBoxSmall {...el} onClick={() => navigate(`/car/${el.id}`)} />
+                <div className="relative slick-car" key={el.id}>
+                  <CarBoxSmall {...el} onClick={() => navigate(`/car_abo/${el.id}`)} />
                 </div>
               ))
             }
@@ -256,9 +247,193 @@ export default function Index() {
       { showCalendar &&
         <ModalCalendar onPressClose={() => setShowCalendar(false)} />
       }
-      <Advantages />
-      <LongTermRental />
-      <Reviews />
+      
+      
+      <div className="container">
+        <div className="vorteile">
+
+        <h2>Auto Abo Vorteile auf einen Blick</h2>
+
+          <div className="vorteile-box">
+            <FaCarCrash className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+          <div className="vorteile-box">
+            <FaRegCalendar className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+          <div className="vorteile-box">
+            <IoMdHome className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+          <div className="vorteile-box">
+            <FaEuroSign className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+          <div className="vorteile-box">
+            <FaMap className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+          <div className="vorteile-box">
+            <FaSync className="vorteile-icon" />
+            <h3>Günstige Preise</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="container">
+
+        <div className="how-works">
+
+            <div className="how-works-box autoabo-img-div">
+           
+            </div>
+
+            <div className="how-works-box car-data-list">
+              <h2>So funktioniert CARMAKE</h2>
+
+              <div>
+                <h4>1. Abo-Fahrzeug auswählen</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+
+              <div>
+                <h4>2. Abo-Fahrzeug auswählen</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+
+              <div>
+                <h4>3. Abo-Fahrzeug auswählen</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+
+              <div>
+                <h4>4. Abo-Fahrzeug auswählen</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+
+              <div className="center">
+                <a href="/">Entdecke Angebote</a>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+      
+      <div className="container">
+
+        <div className="reviews-content">
+
+          <h2>Was unsere Kunden sagen</h2>
+
+          <div className="reviews">
+
+            <div className="r-header">
+              <div>
+                <img src="https://ui-avatars.com/api/?name=John+Doe" />
+              </div>
+
+              <div className="r-header-two">
+                <p>Jana D.</p>
+                <span>BMW 320d</span>
+              </div>
+
+            </div>
+
+          <div className="rv-main">
+
+            <div className="stars">
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+
+            </div>
+
+          </div>
+
+          <div className="reviews">
+
+            <div className="r-header">
+              <div>
+                <img src="https://ui-avatars.com/api/?name=Thomas+A" />
+              </div>
+
+              <div className="r-header-two">
+                <p>Thomas A.</p>
+                <span>Opel Corsa</span>
+              </div>
+
+            </div>
+
+            <div className="rv-main">
+
+              <div className="stars">
+                <IoIosStar className="star" color="orange" />
+                <IoIosStar className="star" color="orange" />
+                <IoIosStar className="star" color="orange" />
+                <IoIosStar className="star" color="orange" />
+                <IoIosStar className="star" color="orange" />
+              </div>
+
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+
+              </div>
+
+            </div>
+
+    
+        <div className="reviews">
+
+          <div className="r-header">
+            <div>
+              <img src="https://ui-avatars.com/api/?name=Martin+S" />
+            </div>
+
+            <div className="r-header-two">
+              <p>Martin S.</p>
+              <span>Mercedes-Benz C180</span>
+            </div>
+
+          </div>
+
+          <div className="rv-main">
+
+            <div className="stars">
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+              <IoIosStar className="star" color="orange" />
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
       <Footer />
     </>
   )
@@ -292,7 +467,7 @@ export const loader: LoaderFunction = async ({request, params}) => {
     let getCars: QueryResult<ICarNewImg & { created_at: Date; }> = await pool.query(`
       SELECT
       c.id,
-      c.image as cover,
+      c.image,
       c.name,
       c.model,
       c.brand,
@@ -308,7 +483,7 @@ export const loader: LoaderFunction = async ({request, params}) => {
       c.tires,
       c.created_at,
       array_agg(ci.image) as images,
-      json_agg(DISTINCT jsonb_build_object('id', ct.id, 'price', ct.price, 'duration', ct.duration)) as contract,
+      json_agg(DISTINCT jsonb_build_object('id', ct.id, 'price', ct.price, 'duration', ct.duration)) as durationcontract,
       json_agg(DISTINCT jsonb_build_object('id', km.id, 'price', km.price, 'duration', km.duration)) as km
       FROM car_abo c
 

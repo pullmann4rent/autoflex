@@ -70,7 +70,6 @@ export default function CarID() {
 
   const navigate = useNavigate();
 
-  console.log(actionData);
   const [isAvailable, setIsAvailable] = useState<boolean | null>(null);
   const [price, setPrice] = useState<number>();
 
@@ -325,7 +324,7 @@ export default function CarID() {
             </section>
 
             <section className="cid-price-container">
-              <p className="cid-price">{price}€</p>
+              <p className="cid-price">{price?.toFixed(2)}€</p>
               <p className="cid-small">pro Monat inkl. MwSt.</p>
             </section>
 
@@ -446,7 +445,7 @@ export default function CarID() {
                       <div onClick={() => handlePriceContract(el)} className={`cid-autosize ${el.id === selectedContract && 'active-border-cid-modal'}`}>
                         <section className="cid-modal-choose-btn flex fd fd-column">
                           <p className="cid-dc">{el.duration} Monate</p>
-                          <p className="cid-modal-price">{el.price}€</p>
+                          <p className="cid-modal-price">{parseFloat(el.price).toFixed(2)}€</p>
                         </section>
                       </div>
                       </>
@@ -464,7 +463,7 @@ export default function CarID() {
                        <div onClick={() => handlePriceKM(el)} className={`cid-autosize ${el.id === selectedKM && 'active-border-cid-modal'}`}>
                         <section className="cid-modal-choose-btn flex fd fd-column">
                           <p className="cid-dc">+{el.duration} km</p>
-                          <p className="cid-modal-price">{el.price === '0' ? 'Kostenlos' : `${el.price}€`}</p>
+                          <p className="cid-modal-price">{el.price === '0' ? 'Kostenlos' : `${parseFloat(el.price).toFixed(2)}€`}</p>
                         </section>
                         </div>
                       </>
@@ -481,7 +480,7 @@ export default function CarID() {
 
             <section className="cid-c cid-modal-footer flex flex-between">
               <section>
-                <p className="cid-price">{price}€</p>
+                <p className="cid-price">{price?.toFixed(2)}€</p>
                 <p className="cid-small">pro Monat inkl. MwSt.</p>
               </section>
 
@@ -817,6 +816,9 @@ export const loader = async ({ request, params }) => {
     SELECT car_id as id, ARRAY_AGG(image) as images FROM car_images WHERE car_images.car_id = $1 GROUP BY car_images.car_id
 `, [id]);
 
+console.log('RES 2 rows')
+console.log(res2.rows);
+
 const res3 = await pool2.query(`
     SELECT cc.car_id as id, json_agg(json_build_object(
       'id', cc.id,
@@ -835,7 +837,14 @@ const res4 = await pool2.query(`
 
 var merged = _.merge(_.keyBy(res.rows, 'id'), _.keyBy(res2.rows, 'id'), _.keyBy(res3.rows, 'id'), _.keyBy(res4.rows, 'id'));
 var values: ICar[] = _.values(merged);
-return json(values[0]);
+
+let v = values.map((el) => ({
+  ...el,
+  images: el.images ?? []
+}))
+
+console.log(values[0]);
+return json(v[0]);
 
 /*     if(res.rows.length > 0 && res2.rows.length > 0) {
       console.log('HERE');

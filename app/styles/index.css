@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 :root {
- --main-color: rgb(241 105 8);
+ --main-color: #029ccf;
 }
 
 * {
@@ -343,6 +343,7 @@ input, select {
 
 .header nav ul li a {
   color: #fff;
+  font-weight: 600;
 }
 
 .header nav ul li a {
@@ -366,7 +367,8 @@ button {
 }
 
 .termin-btn {
-  background-color: var(--main-color);
+  background-color: black;
+  border: 1px solid #fff;
   color: #fff;
   padding: 10px 24px;
   border-radius: 4px;
@@ -375,11 +377,11 @@ button {
 }
 
 .bg {
-  background-image: url('/app/assets/bg.jpeg');
+  background-image: url('/app/assets/wall.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(100vh - 280px);
-  background-position: top;
+  height: calc(100vh - 180px);
+  background-position: center;
 }
 
 .text-left {
@@ -445,14 +447,14 @@ button {
   color: #fff;
   font-size: 2em;
   font-weight: 500;
-  margin-top: 1.5em;
+  margin-top: 4em;
   text-align: center;
 }
 
 .bg-subtitle {
-  color: var(--main-color);
+  color: #fff;
   font-size: 1.125em;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1.5em;
 }
 
@@ -466,7 +468,7 @@ button {
 
 .select-car {
   background-color: #fff;
-  padding: 16px;
+  padding: 24px;
   border-radius: 4px;
   width: fit-content;
   margin-top: 2em;
@@ -477,22 +479,354 @@ button {
   flex-direction: column;
 }
 
+.car-slick .slick-slide {
+  padding: 0 15px !important;
+}
+
+.car-slick .slick-list {
+  margin: 0 2em !important;
+}
+
+.slick-car {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.c-hd {
+  height: 44px;
+}
+
+.c-hd-img-con {
+  height: 12rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.c-hd-img-con img {
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.c-car-main {
+  padding: 16px;
+  padding-bottom: 0px !important;
+}
+
+.c-hd {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.c-hd h2 {
+  max-width: 85%;
+  margin-bottom: 24px;
+}
+
+.c-hd-span {
+    background-color: rgb(42 166 207 / 20%);
+    color: var(--main-color);
+    font-size: 0.9em;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.c-hd-span span {
+  font-size: 0.9em;
+}
+
+.c-price {
+  font-size: 1.25em;
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 24px;
+  margin-top: 12px;
+}
+
+/* VORTEILE */
+
+.vorteile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+
+.vorteile h2 {
+  margin-top: 160px;
+  margin-bottom: 70px;
+  font-size: 2em;
+  width: 100%;
+}
+
+.vorteile-box {
+  width: 400px;
+  margin-bottom: 82px;
+}
+
+.vorteile-icon {
+  font-size: 2em;
+}
+
+.vorteile-box h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 12px 0px;
+  margin-bottom: 10px;
+}
+
+.vorteile-box p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* HOW WORKS */
+
+.how-works {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 760px;
+  max-height: 860px;
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+}
+
+.how-works-box {
+  width: 50%;
+}
+
+.autoabo-img-div {
+  overflow: hidden;
+  background-image: url(https://images.unsplash.com/photo-1537211790624-e6f568af4b13?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  display: block;
+  height: 860px;
+  overflow: hidden;
+  width: 50%;
+}
+
+picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-works a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+.how-works h2 {
+  font-size: 2em;
+}
+
+.car-data-list {
+  padding: 84px;
+}
+
+.how-works ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.how-works ul li {
+  color: #fff;
+  margin: 24px 0px;
+  font-size: 1.5em;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-works img {
+  max-width: unset !important;
+  height: unset;
+  object-fit: cover;
+  width: 100%;
+}
+
+.car-data-list div {
+  margin: 24px 0px;
+}
+
+.car-data-list h4 {
+  margin-bottom: 12px;
+}
+
+.car-data-list p {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 320px) and (max-width: 940px) {
+  .how-works {
+    height: unset;
+    width: unset;
+    max-height: unset;
+    min-height: unset;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .autoabo-img-div {
+    padding-bottom: 66%;
+    background-size: 100% auto;
+    width: 100%;
+    height: unset;
+  }
+
+  .how-works-box {
+    width: 100%;
+  }
+
+  .car-data-list {
+    background-color: #000000;
+    padding: 48px;
+  }
+
+  .vorteile h2 {
+    margin-left: 24px;
+    margin-bottom: 36px;
+    margin-top: 80px;
+  }
+
+  .vorteile-box {
+    padding: 24px;
+    margin-bottom: 48px;
+    width: 100%;
+  }
+
+  .car-slick .slick-list {
+    margin: 0 0em !important;
+  }
+
+  .car-slick .slick-slide {
+    padding: 0px;
+  }
+}
+
+.reviews-content {
+  margin: 86px 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.reviews-content h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 86px;
+  width: 100%;
+}
+
+.reviews {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.reviews-box {
+  margin: 12px;
+  padding: 12px;
+}
+
+.r-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.r-header img {
+  height: 52px;
+  width: 52px;
+  border-radius: 100%;
+  margin-right: 12px;
+}
+
+.r-header p {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.r-header span {
+  font-size: 0.875em;
+  font-weight: 300;
+}
+
+.r-header-two {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.stars {
+  margin-bottom: 4px;
+}
+
+.rv-main p {
+  font-size: 0.925em;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 1350px) {
+  .c-hd-img-con img {
+    width: 79% !important;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.details li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details li div {
+  margin-bottom: 12px;
+  font-size: 0.875em;
+  color: rgb(107 114 128);
+}
+
+.details li span {
+  margin-bottom: 24px;
+}
+
 .select-car h2 {
   text-align: center;
   font-size: 1.25em;
   margin-bottom: 24px;
-  color: var(--main-color);
+  color: black;
   font-weight: 500;
 }
 
 .select-car select {
-  margin: 0px 12px;
   background-color: #eee;
-  border: 7px solid transparent;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-right-width: 12px;
   width: 370px;
   margin-bottom: 12px;
   padding: 12px;
@@ -502,20 +836,50 @@ button {
 }
 
 .select-car-btn {
-  background-color: var(--main-color);
+  background-color: black;
   color: #fff;
   padding: 10px 24px;
   border-radius: 4px;
   font-size: 0.9em;
-  width: 370px;
-  margin-left: 10px;
+  margin-top: 1px;
   font-family: inherit;
+  width: 100% !important;
+}
+
+.c-btn-car {
+  width: 100%;
+}
+
+.c-more-d {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.c-more-d div {
+  margin-bottom: 6px;
+}
+
+.c-more-d span {
+  font-size: 0.95em;
+}
+
+.c-btn-car {
+  background-color: black;
+  font-weight: 500;
+  padding: 11px 14px;
+  width: 100%;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.925em;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
-  .slider-content h1, .slider-content h2 {
+/*   .slider-content h1, .slider-content h2 {
     display: none;
-  }
+  } */
   .select-car .s-con {
     flex-direction: column;
   }
@@ -524,9 +888,6 @@ button {
     margin: 6px 0px;
   }
   
-  .select-car .s-con button {
-    width: 93%;
-  }
 }
 
 .car-box {
@@ -959,7 +1320,7 @@ button {
 }
 
 .reviews {
-  max-width: 350px;
+  max-width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1279,7 +1640,40 @@ button {
   margin-top: 12px;
 }
 
+.bold-p {
+  font-weight: 600;
+  color: #4d4c4c;
+}
+
+.pro-month {
+  margin-left: 5px;
+  color: #737373;
+  font-size: 0.925em;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1024px) {
+
+  .reviews-content {
+    padding: 24px;
+  }
+
+  .reviews {
+    margin-top: 80px;
+  }
+
+  .reviews-content h2 {
+    margin-bottom: 0px;
+  }
+
+  .main-main {
+    background-color: black;
+  }
+
+
+  .bg {
+    height: calc(100vh - 380px) !important;
+  }
+
   .hamburger-container {
     display: block;
   }
@@ -1381,30 +1775,31 @@ button {
     flex-direction: column;
   }
 
-  .main-main .slick-slider {
+/*   .main-main .slick-slider {
     display: none;
   }
-
+ */
   .main-main .select-car {
     margin-bottom: 36px;
   }
 
-  .slider-content {
-    position: relative !important;
+   .slider-content {
     left: 0 !important;
     transform: unset !important;
-    top: unset !important;
+    top: 0px !important;
     width: 100% !important;
-    background-color: black;
   }
 
+  .slider-content h1 {
+    margin-top: 2em !important;
+  }
+ 
   .cf-sec1 {
     flex-direction: column !important;
     align-items: flex-end !important;
   }
 
   .select-car-btn {
-    width: 295px;
     margin-left: 0px !important;
     padding: 10px !important;
   }
@@ -1884,7 +2279,7 @@ button {
 }
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
-  .bg {
+/*   .bg {
     background: black;
     background-image: unset !important;
       background-size: cover !important;
@@ -1892,7 +2287,7 @@ button {
       height: calc(100vh - 323px) !important;
       background-position: top;
     }
-  
+   */
     .text-left, .text-right {
       display: none !important;
     }

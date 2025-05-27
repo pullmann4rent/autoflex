@@ -537,6 +537,8 @@ polyline {
   width: 320px;
   z-index: 9999;
   left: 0;
+  width: 100% !important;
+  height: 100% !important;
   top: 48px;
 }
 
@@ -3827,9 +3829,11 @@ color:rgba(211,106,31,1);font-weight:600;font-size: 2.5em;padding-bottom:24px;
 }
 
 .carabo h3 {
-  margin-bottom: 16px;
-  font-weight: 400;
-  color: #555;
+  margin-top: 0px !important;
+  margin-bottom: 16px !important;
+  font-weight: 400 !important;
+  color: #555 !important;
+  font-size: 1em !important;
 }
 
 .carabo h4 {
@@ -3987,6 +3991,11 @@ input[type=number] {
   cursor: pointer;
 }
 
+.search-inner-content {
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
 .search-inner li {
   margin-left: 8px;
   font-weight: 400;
@@ -4032,7 +4041,7 @@ input[type=number] {
 }
 
 .ca-name {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 6px;
@@ -4042,12 +4051,14 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
+  color: #fff;
 }
 
 .ca-ul {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .ca-ul li {
@@ -4055,6 +4066,12 @@ input[type=number] {
   margin-right: 0;
   margin-left: 0;
   font-weight: 300;
+  text-overflow: ellipsis;
+  max-width: 175px;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  color: #737373;
 }
 
 .ca-price-con span {
@@ -4229,15 +4246,16 @@ input[type=number] {
 /* MODAL CONTENT NEW */
 
 .modal-content-new {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 0px;
+  position: fixed !important;
+  display: flex !important;
+  flex-direction: column !important;
+  top: 0px !important;
   right: -60vw; /* - width */
-  width: 600px;
-  height: 100vh;
-  background-color: #fff;
-  transition: .35s ease;
+  width: 600px !important;
+  height: 100vh !important;
+  background-color: #fff !important;
+  transition: .35s ease !important;
+  transform: unset !important;
 }
 
 .active-md {
@@ -4412,7 +4430,7 @@ input[type=number] {
 .cid2-checkbox {
   height: 20px;
   width: 20px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #ccc;
 }
 
 .cid2-checkbox-container {
@@ -5026,6 +5044,7 @@ input[type=number] {
 .car-select-modal .rent-container {
   align-items: center !important;
 }
+
 
 /* CALENDAR */
 
