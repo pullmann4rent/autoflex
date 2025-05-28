@@ -101,6 +101,17 @@ export default function CarID() {
 
   const today = new Date();
 
+
+  useEffect(() => {
+    if(showModal) {
+      const d = document.querySelector('html');
+      d.style.overflowY = 'hidden';
+    } else {
+      const d = document.querySelector('html');
+      d.style.overflowY = 'scroll';
+    }
+  }, [showModal]);
+
   useEffect(() => {
     if(actionData && actionData?.success === true) {
       setLoad(false);
@@ -549,7 +560,7 @@ export default function CarID() {
 
                   <p className="flex">Farbe: <ul className="cid-colors ul-cid2"><li className="active-color"><div /></li></ul></p>
 
-                  <p>Vertragslaufzeit: { car.durationcontract.find((el => el.id === selectedContract))?.duration ?? '0' } Monate ({car.durationcontract.find((el => el.id === selectedContract))?.price}€)</p>
+                  <p>Vertragslaufzeit: { car.durationcontract.find((el => el.id === selectedContract))?.duration ?? '0' } Monate ({ parseFloat(car.durationcontract.find((el => el.id === selectedContract))?.price).toFixed(2)}€)</p>
 
                   <p>Kilometer: +{ car.km.find((el => el.id === selectedKM))?.duration ?? '0' } Kilometer ({ parseFloat(car.km.find((el => el.id === selectedKM))?.price).toFixed(2)}€)</p>
 
