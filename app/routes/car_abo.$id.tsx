@@ -551,14 +551,14 @@ export default function CarID() {
 
                   <p>Vertragslaufzeit: { car.durationcontract.find((el => el.id === selectedContract))?.duration ?? '0' } Monate ({car.durationcontract.find((el => el.id === selectedContract))?.price}€)</p>
 
-                  <p>Kilometer: +{ car.km.find((el => el.id === selectedKM))?.duration ?? '0' } Kilometer ({ car.km.find((el => el.id === selectedKM))?.price}€)</p>
+                  <p>Kilometer: +{ car.km.find((el => el.id === selectedKM))?.duration ?? '0' } Kilometer ({ parseFloat(car.km.find((el => el.id === selectedKM))?.price).toFixed(2)}€)</p>
 
                   <p className="cid-available">Verfügbar ab  { isAvailable === null ? '' : !isAvailable ? format(new Date(car.availability), 'dd.MM.yyyy') : 'sofort' }</p> 
 
                 </section>
                 
                 <section className="cid-price-container">
-                  <p className="cid-price">{price}€</p>
+                  <p className="cid-price">{price?.toFixed(2)}€</p>
                   <p className="cid-small">pro Monat inkl. MwSt.</p>
                 </section>
 
