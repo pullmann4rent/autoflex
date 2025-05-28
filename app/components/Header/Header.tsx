@@ -1,5 +1,5 @@
 import { Link, NavLink } from '@remix-run/react';
-import Logo from '../../assets/logo_1.png';
+import Logo from '../../assets/logo_new2.jpeg';
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { RiPhoneFill } from "react-icons/ri";
 import { useState } from 'react';
@@ -29,7 +29,7 @@ export function Header() {
 
             <section>
               <section className="hamburger-container">
-                { navOpen ? <IoCloseOutline onClick={() => setNavOpen(false)} size={32} color="#fff" /> : <RxHamburgerMenu onClick={() => setNavOpen(true)} size={32} color="#fff" /> }
+                { navOpen ? <IoCloseOutline onClick={() => setNavOpen(false)} size={32} color="black" /> : <RxHamburgerMenu onClick={() => setNavOpen(true)} size={32} color="black" /> }
               </section>
               <nav role="navigation" className={`header-nav mb-nav`}>
                 <ul className="flex ai-c">
@@ -49,7 +49,7 @@ export function Header() {
                     <a href="tel:+491782498927">
                       <RiPhoneFill 
                         size={20}
-                        color="#fff"
+                        color="black"
                       />
                     </a>
                   </li>

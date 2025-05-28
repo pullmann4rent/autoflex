@@ -1,5 +1,5 @@
 import { AiFillInstagram, AiFillTikTok } from 'react-icons/ai';
-import Logo from '../../assets/logo_1.png';
+import Logo from '../../assets/logo_new2.jpeg';
 import { Link } from '@remix-run/react';
 import { FiChevronRight } from 'react-icons/fi';
 
@@ -58,7 +58,7 @@ export function Footer() {
       </section>
 
       <section className="flex ai-c jc-c f-f">
-        <span>&copy; 24Mobility 2024</span>
+        <span>&copy; Carflex 2024</span>
       </section>
 
       </section>

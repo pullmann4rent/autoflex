@@ -528,7 +528,7 @@ export default function CarID() {
       <>
         <Header />
         { showPicker &&
-          <section className="modal" onClick={() => setShowPicker(false)}>
+          <section className="modal modal-book" onClick={() => setShowPicker(false)}>
             <section className="modal-content md-date" onClick={(e) => e.stopPropagation()}>
               <DayPicker
                 mode="single"

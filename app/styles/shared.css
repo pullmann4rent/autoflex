@@ -2264,6 +2264,10 @@ color:rgba(211,106,31,1);font-weight:600;font-size: 2.5em;padding-bottom:24px;
   transform: unset !important;
 }
 
+.modal-book {
+  transform: unset !important;
+}
+
 .modal-content {
   padding: 12px 24px 24px;
   background-color: #fff;
@@ -2328,9 +2332,9 @@ color:rgba(211,106,31,1);font-weight:600;font-size: 2.5em;padding-bottom:24px;
   background-color: rgba(0,0,0,0.3) !important;
 }
 
-.ca-img-con img {
+/* .ca-img-con img {
   max-height: 170px;
-}
+} */
 
 .mod2 {
   left: 0 !important;
