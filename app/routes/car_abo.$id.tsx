@@ -438,7 +438,7 @@ export default function CarID() {
           <section className={`modal-content-new relative ${showAnimation && 'active-md'}`} onClick={(e) => e.stopPropagation()}>
 
             <section className="cid-c cid-modal-header flex flex-between">
-              <p>Konfigurieren Sie Ihr Abonoment</p>
+              <p>Konfigurieren Sie Ihr Abonnement</p>
               <button type="button" onClick={handleCloseModal}><IoCloseOutline size={28} /></button>
             </section>
 
