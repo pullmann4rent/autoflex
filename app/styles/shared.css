@@ -4710,6 +4710,10 @@ input[type=number] {
   border-radius: 6px;
 }
 
+.cid-modal-main {
+  overflow-y: auto;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .sec-index-first, .sec-index-second, .sec-index-third, .sec-index-fourth {
     padding: 24px;
