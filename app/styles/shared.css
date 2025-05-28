@@ -4717,6 +4717,10 @@ input[type=number] {
     margin-bottom: 20px;
   }
 
+  .modal-content-new {
+    width: 100% !important;
+  }
+
   .carabo-card {
     width: 100% !important;
   }
