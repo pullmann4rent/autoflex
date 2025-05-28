@@ -79,6 +79,13 @@ export default function CarID() {
 
   const [init, setInit] = useState<number>(0);
 
+
+  useEffect(() => {
+    if(step === 2) {
+      document.documentElement.scrollTo(0, 0);
+    }
+  }, [step]);
+
   const [showSlider, setShowSlider] = useState<boolean>(false);
 
   const [selectedContract, setSelectedContract] = useState<number | null>(null);
