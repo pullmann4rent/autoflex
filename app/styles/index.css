@@ -1671,7 +1671,7 @@ picture {
 
 
   .bg {
-    height: calc(100vh - 380px) !important;
+    height: calc(100vh - 200px) !important;
   }
 
   .hamburger-container {
