@@ -4721,6 +4721,11 @@ input[type=number] {
     margin-bottom: 20px;
   }
 
+
+  .modal {
+    z-index: 9999999 !important;
+  }
+
   .modal-content-new {
     width: 100% !important;
   }
