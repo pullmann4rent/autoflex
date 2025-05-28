@@ -1653,6 +1653,18 @@ picture {
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
 
+  .select-car .s-con {
+    width: 100% !important;
+  }
+
+  .select-car {
+    width: 93%;
+  }
+
+  .select-car select {
+    width: 100% !important;
+  }
+
   .reviews-content {
     padding: 24px;
   }
@@ -1808,6 +1820,7 @@ picture {
     margin-left: 0px !important;
     margin-right: 0px !important;
     font-family: inherit;
+    background-color: #fff;
   }
 
   .bg-subtitle {
