@@ -13,6 +13,11 @@ import _ from 'lodash';
 import { ICar } from "~/components/CarBoxRenew/types";
 import { Header } from "~/components/Header/Header";
 import { sortByHighest, sortByLowest } from "~/utils/sortBy";
+import BMW from '../assets/bmw.png';
+import Opel from '../assets/opel.png';
+import Benz from '../assets/mercedes.png';
+import Peugeot from '../assets/peugeot.png';
+import Kia from '../assets/kia.png';
 import '../styles/shared.css';
 import '../styles/index.css';
 import "react-day-picker/style.css";
@@ -104,7 +109,7 @@ export const cars: ICarAboCard[] = [
   }
 ]
 
-export const brands: string[] = ['Mercedes-Benz', 'BMW', 'Audi', 'Opel', 'VW', 'Ford', 'Toyota', 'Fiat']; 
+export const brands: string[] = ['BMW', 'Kia', 'Mercedes-Benz', 'Opel', 'Peugeot']; 
 
 export const tires: string[] = ['Ganzjahresreifen', 'Sommerreifen', 'Winterreifen'];
 
@@ -115,12 +120,12 @@ export const model: {
 }[] = [
   {
     car_id: 1,
-    name: 'Audi',
+    name: 'BMW',
     model: []
   },
   {
     car_id: 2,
-    name: 'Opel',
+    name: 'Kia',
     model: []
   },
   {
@@ -130,29 +135,14 @@ export const model: {
   },
   {
     car_id: 4,
-    name: 'BMW',
+    name: 'Opel',
     model: []
   },
   {
-    name: 'Ford',
+    name: 'Peugeot',
     car_id: 5,
     model: []
   },
-  {
-    name: 'Toyota',
-    car_id: 6,
-    model: []
-  },
-  {
-    name: 'VW',
-    car_id: 7,
-    model: []
-  },
-  {
-    name: 'Fiat',
-    car_id: 8,
-    model: []
-  }
 ];
 
 export const fuel: string[] = ['Benzin', 'Diesel', 'Elektro'];
@@ -598,7 +588,14 @@ export default function Autoabo() {
                           :
                           <div className="checkbox-search" />
                         }
-                        <li>{el}</li>
+                        <li className="list-flex-brand">
+                          {
+                            el === 'BMW' ?
+                            <img src={BMW} alt="bmw" />
+                            : (el === 'Kia' ? <img src={Kia} /> : (el === 'Mercedes-Benz' ? <img src={Benz} /> : (el === 'Peugeot' ? <img src={Peugeot} /> : <img src={Opel} />)))
+                          }
+                          <p>{el}</p>
+                        </li>
                       </section>
                     )
                   }))

@@ -158,7 +158,7 @@ src="https://www.facebook.com/tr?id=1123059735992339&ev=PageView&noscript=1"
         {showTOSBanner ? <CookieBanner /> : null}
         <ScrollRestoration />
         <Scripts />
-        <Whatsapp />
+
       </body>
     </html>
   );

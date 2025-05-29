@@ -377,7 +377,7 @@ button {
 }
 
 .bg {
-  background-image: url('/app/assets/wall.jpg');
+  background-image: url('/app/assets/bg_bmw.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 180px);
@@ -490,7 +490,7 @@ button {
 .slick-car {
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .c-hd {
@@ -498,7 +498,7 @@ button {
 }
 
 .c-hd-img-con {
-  height: 15rem;
+  height: 12rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -825,7 +825,7 @@ picture {
 }
 
 .select-car select {
-  background-color: #eee;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 370px;
@@ -875,6 +875,76 @@ picture {
   color: #fff;
   font-size: 0.925em;
   font-weight: 600;
+}
+
+.custom-select {
+  width: 350px;
+  margin-bottom: 12px;
+}
+
+.custom-select-header {
+  border: 1px solid #ccc;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-select-content {
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: 0px;
+  z-index: 999999;
+}
+
+.custom-select-content ul {
+    display: flex;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+.custom-select-content ul li {
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+  margin-right: 0px !important;
+}
+
+.csc-model {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.csc-model ul {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.csc-model ul li:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.custom-select-content img {
+  height: 40px;
+  width: 40px;
+}
+
+.list-flex-brand {
+  display: flex;
+  align-items: center;
+}
+
+.search-data img {
+  height: 24px;
+  width: 24px;
+  margin-left: 4px;
+  margin-right: 8px;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
@@ -2227,6 +2297,7 @@ width: 150px;
 }
 
 .cal-icon-content {
+  display: none !important;
   position: fixed;
   cursor: pointer;
   bottom: 95px;

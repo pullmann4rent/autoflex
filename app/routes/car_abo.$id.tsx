@@ -19,6 +19,7 @@ import PaymentStripe from "./payment";
 import { Question } from "~/components/Faqs";
 import '../styles/faq_new.css';
 import "react-day-picker/style.css";
+import { MdOutlineInfo } from "react-icons/md";
 
 const faqs = [
   {
@@ -78,6 +79,10 @@ export default function CarID() {
   const [step, setStep] = useState<number>(1);
 
   const [init, setInit] = useState<number>(0);
+
+  const [stepModal, setStepModal] = useState<number>(1);
+
+  const [selectedPauschale, setSelectedPauschale] = useState<'ONE_TIME' | 'MONTHLY'>('ONE_TIME');
 
 
   useEffect(() => {
@@ -216,7 +221,11 @@ export default function CarID() {
 
   console.log(car)
 
+ 
   const handleStepPayment = () => {
+    if(stepModal === 1) {
+      setStepModal(2);
+    } else {
     window.localStorage.setItem('car_data', JSON.stringify({
       color: selectedColor,
       contract: fullContract,
@@ -225,9 +234,17 @@ export default function CarID() {
     }));
 
     setStep(2);
+  }
 
    // navigate('/payment');
   };
+
+  useEffect(() => {
+    if(step === 2) {
+      const d = document.querySelector('html');
+      d.style.overflowY = 'scroll';
+    }
+  }, [step]);
 
   const [form1, setForm1] = useState<boolean>(true);
   const [form2, setForm2] = useState<boolean>(false);
@@ -438,7 +455,13 @@ export default function CarID() {
           <section className={`modal-content-new relative ${showAnimation && 'active-md'}`} onClick={(e) => e.stopPropagation()}>
 
             <section className="cid-c cid-modal-header flex flex-between">
+              <div className="header-cid-car">
+                { stepModal === 2 &&
+                  <IoArrowBack onClick={() => setStepModal(1)} className="arrow-back-cid" />
+                }
+           
               <p>Konfigurieren Sie Ihr Abonnement</p>
+                 </div>
               <button type="button" onClick={handleCloseModal}><IoCloseOutline size={28} /></button>
             </section>
 
@@ -454,6 +477,9 @@ export default function CarID() {
                 </section>
               </section>
 
+            <div className="main-modal-cid">
+              { stepModal === 1 ?
+              <div>
               <section className="cid-modal-main-contract">
                 <p className="cid-dc-title">Vertragslaufzeit</p>
                 <section className="flex flex-wrap cid-dc-container">
@@ -493,6 +519,30 @@ export default function CarID() {
               <p className="cid-info">
                 Mehrkilometer über Ihr Kilometerpaket hinaus kosten Sie 0,25€ pro km (inkl. MwSt.) Die zusätzlichen Kosten werden nach der Rückgabe des Fahrzeugs abgerechnet.
               </p>
+
+              </div>
+            
+          : (
+              <div className="step-two-cid">
+
+                <div className="pauschale-header">
+                  <h4>Servicepauschale</h4>
+    
+                </div>
+                
+                <div onClick={() => setSelectedPauschale('ONE_TIME')} className={`step-two-cid-btn ${selectedPauschale === 'ONE_TIME' && 'step-two-cid-btn-active'}`}>
+                  <p>Einmalige Zahlung 1.500€</p>
+                </div>
+
+                <div onClick={() => setSelectedPauschale('MONTHLY')} className={`step-two-cid-btn t-cid-btn2 ${selectedPauschale === 'MONTHLY' && 'step-two-cid-btn-active'}`}>
+                  <p>Monatliche Zahlung</p>
+                  <p>+ 138 €</p>
+                </div>
+              </div>
+          )}
+
+            
+              </div>
 
             </section>
 

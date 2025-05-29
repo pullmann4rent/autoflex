@@ -12,8 +12,6 @@ a {
   font-weight: 500;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -30,7 +28,7 @@ button {
 .header {
   overflow: hidden;
   position: relative;
-  border-bottom: 3px solid rgba(211,106,31,255);
+  border-bottom: 1px solid #ccc;
 }
 
 .container, .container-large {
@@ -4024,7 +4022,7 @@ input[type=number] {
 
 .ca-img-con {
   height: 190px;
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4192,7 +4190,7 @@ input[type=number] {
 }
 
 .cid-price {
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 .cid-small {
@@ -4715,6 +4713,40 @@ input[type=number] {
 
 .cid-modal-main {
   overflow-y: auto;
+}
+
+.step-two-cid-btn {
+    border: 2px solid #e5e5e5;
+    padding: 12px;
+    font-weight: 500;
+      margin-bottom: 16px;
+      cursor: pointer;
+}
+
+.step-two-cid-btn-active {
+  border: 2px solid black;
+}
+
+.t-cid-btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step-two-cid h4 {
+  font-size: 1.25em;
+  margin-top: 36px;
+  margin-bottom: 18px;
+}
+
+.header-cid-car {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-back-cid {
+  cursor: pointer;
+  margin-right: 6px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
