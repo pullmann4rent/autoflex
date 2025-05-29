@@ -6,7 +6,7 @@ import { DayPicker, Footer } from 'react-day-picker';
 import { format } from 'date-fns';
 import { de } from 'date-fns/locale';
 import { IoCalendarOutline } from "react-icons/io5";
-import { Link, useLoaderData, useSearchParams } from "@remix-run/react";
+import { Link, useLoaderData, useNavigate, useNavigation, useSearchParams } from "@remix-run/react";
 import { json } from "@remix-run/node";
 import pool2 from "~/data/db.server";
 import _ from 'lodash';
@@ -544,6 +544,9 @@ export default function Autoabo() {
     setSelectedDate(e);
     setShowPicker(false);
   };
+
+
+
   return (
     <>
       <Header />

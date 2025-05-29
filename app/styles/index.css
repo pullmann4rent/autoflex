@@ -587,6 +587,20 @@ button {
   line-height: 1.6;
 }
 
+.header-selected-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-selected-brand p {
+  margin-left: 5px;
+}
+
+.header-selected-brand img {
+  height: 32px;
+  width: 32px;
+}
+
 /* HOW WORKS */
 
 .how-works {
