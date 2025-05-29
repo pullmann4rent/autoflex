@@ -525,7 +525,7 @@ button {
 }
 
 .c-hd h2 {
-  max-width: 85%;
+  max-width: 68%;
   margin-bottom: 24px;
 }
 
@@ -904,8 +904,8 @@ picture {
     display: flex;
     align-items: flex-start;
     /* flex-direction: column; */
-    padding-top: 12px;
-    padding-bottom: 6px;
+    padding-top: 24px;
+    padding-bottom: 19px;
 }
 
 .custom-select-content ul li {

@@ -25,6 +25,11 @@ import ModalCalendar from "~/components/ModalCalendar/ModalCalendar";
 import Autoabo from '../assets/autoabo.jpg';
 import { FaCarCrash, FaEuroSign, FaMap, FaRegCalendar, FaSync } from "react-icons/fa";
 import { IoIosStar, IoIosStarOutline, IoMdHome } from "react-icons/io";
+import rs7 from '../assets/rs7.jpg';
+import landrover from '../assets/landrover.jpg';
+import audi from '../assets/audi.jpg';
+import gle from '../assets/gle.jpg';
+import rs72 from '../assets/rs72.jpg';
 
 export const meta: MetaFunction = () => {
   return [
@@ -165,7 +170,8 @@ export default function Index() {
     dots: false,
     infinite: false,
     speed: 100,
-    slidesToShow: data.allCars.length > 3 ? 3 : data.allCars.length,
+    slidesToShow: 4,
+   // slidesToShow: data.allCars.length > 3 ? 3 : data.allCars.length,
     slidesToScroll: 1,
     autoplay: false,
     cssEase: "linear",
@@ -236,6 +242,155 @@ export default function Index() {
                 </div>
               ))
             }
+            <div className="relative slick-car">
+                  <CarBoxSmall
+                    id={0}
+                    image={rs7}
+                    fuel="Benzin"
+                    type="Limousine"
+                    engine="Automatik"
+                    images={[]}
+                    availability=""
+                    annotation="RS7"
+                    model_year={2022}
+                    model="RS7"
+                    tires="Ganzjahresreifen"
+                    sit_places={4}
+                    consumption="q"
+                    brand="Audi"
+                    durationcontract={[{
+                      duration: "12",
+                      price: "529.99",
+                      id: 1
+                    }]}
+                    details={{
+                      engine: 'Automatik',
+                      type: 'Limousine',
+                      fuel: 'Benzin'
+                    }}
+                    ps={630}
+                    />
+                </div>
+                           <div className="relative slick-car">
+                  <CarBoxSmall
+                    id={0}
+                    image={audi}
+                    fuel="Benzin"
+                    type="Limousine"
+                    engine="Automatik"
+                    images={[]}
+                    availability=""
+                    annotation="A3"
+                    model_year={2024}
+                    model="A3"
+                    tires="Ganzjahresreifen"
+                    sit_places={4}
+                    consumption="q"
+                    brand="Audi"
+                    durationcontract={[{
+                      duration: "12",
+                      price: "129.99",
+                      id: 1
+                    }]}
+                    details={{
+                      engine: 'Automatik',
+                      type: 'Limousine',
+                      fuel: 'Benzin'
+                    }}
+                    ps={200}
+                    />
+                </div>
+                           <div className="relative slick-car">
+                  <CarBoxSmall
+                    id={0}
+                    image={landrover}
+                    fuel="Benzin"
+                    type="Limousine"
+                    engine="Automatik"
+                    images={[]}
+                    availability=""
+                                   annotation="Land Rover"
+                    model_year={2024}
+                    model="Land Rover"
+                    tires="Ganzjahresreifen"
+                    sit_places={4}
+                    consumption="q"
+                    brand="Mercedes-Benz"
+                    durationcontract={[{
+                      duration: "12",
+                      price: "245.99",
+                      id: 1
+                    }]}
+                    details={{
+                      engine: 'Automatik',
+                      type: 'Limousine',
+                      fuel: 'Benzin'
+                    }}
+                    ps={525}
+                    />
+                </div>
+                <div className="relative slick-car">
+                  <CarBoxSmall
+                    id={0}
+                    image={gle}
+                    fuel="Benzin"
+                    type="Limousine"
+                    engine="Automatik"
+                    images={[]}
+                    availability=""
+                                   annotation="GLE 63s"
+                    model_year={2024}
+                    model="GLE  63s"
+                    tires="Ganzjahresreifen"
+                    sit_places={4}
+                    consumption="q"
+                    brand="Mercedes-Benz"
+                    durationcontract={[{
+                      duration: "12",
+                      price: "545.99",
+                      id: 1
+                    }]}
+                    details={{
+                      engine: 'Automatik',
+                      type: 'Limousine',
+                      fuel: 'Benzin'
+                    }}
+                    ps={517}
+                    />
+                </div>
+
+                              <div className="relative slick-car">
+                  <CarBoxSmall
+                    id={0}
+                    image={rs72}
+                    fuel="Benzin"
+                    type="Limousine"
+                    engine="Automatik"
+                    images={[]}
+                    availability=""
+                                   annotation="RS7"
+                    model_year={2024}
+                    model="RS7"
+                    tires="Ganzjahresreifen"
+                    sit_places={4}
+                    consumption="q"
+                    brand="Audi"
+                    durationcontract={[{
+                      duration: "12",
+                      price: "599.99",
+                      id: 1
+                    }]}
+                    details={{
+                      engine: 'Automatik',
+                      type: 'Limousine',
+                      fuel: 'Benzin'
+                    }}
+                    ps={630}
+                    />
+                </div>
+      
+      
+    
           </Slider>
           <button className="next next-2" onClick={() => refSlider2?.current?.slickNext()}><TfiAngleRight size={24} color="grey" /></button>
         </section>

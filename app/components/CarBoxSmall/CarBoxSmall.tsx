@@ -28,7 +28,7 @@ export function CarBoxSmall({
   onClick
 }: ICarNewImg & {onClick: (id: string) => void}) {
   return (
-    <a href={`/car_abo/${id}`} className="cbss cb-first">
+    <a href={ id === 0 ? `#` : `/car_abo/${id}`} className="cbss cb-first">
       
       <div className="c-hd-img-con">
         <img src={image} alt="cover" />
@@ -80,8 +80,11 @@ export function CarBoxSmall({
             <span>{tires}</span>
           </div>
         </div> */}
-
+        { id === 0 ? 
+        <button type="button" className="c-btn-car">Bald verfügbar</button>
+        :
         <button type="button" className="c-btn-car">Zum Auto</button>
+        }
 
       </div>
 

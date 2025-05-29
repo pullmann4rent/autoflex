@@ -142,6 +142,15 @@ export default function CarID() {
     }
   }, []);
 
+
+  useEffect(() => {
+    if(selectedPauschale === 'MONTHLY') {
+      setPrice(parseFloat(price?.toString()) + 138);
+    } else {
+      setPrice(parseFloat(price?.toString()) - 138)
+    }
+  }, [selectedPauschale]);
+
   useEffect(() => {
     console.log('MAKEEEEEEEE');
     const findLowestDuration = Math.min(...car.durationcontract.map((el => parseFloat(el.duration))));
@@ -527,7 +536,6 @@ export default function CarID() {
 
                 <div className="pauschale-header">
                   <h4>Servicepauschale</h4>
-    
                 </div>
                 
                 <div onClick={() => setSelectedPauschale('ONE_TIME')} className={`step-two-cid-btn ${selectedPauschale === 'ONE_TIME' && 'step-two-cid-btn-active'}`}>
